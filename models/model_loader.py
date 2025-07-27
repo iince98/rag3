@@ -12,7 +12,11 @@ def load_model(model_path):
     #     bnb_4bit_use_double_quant=False,
     # )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_path,
+        local_files_only=True,
+        )
+    
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
         device_map="auto",
