@@ -12,17 +12,17 @@ def load_model(model_path):
     #     bnb_4bit_use_double_quant=False,
     # )
 
-    # tokenizer = AutoTokenizer.from_pretrained(model_path)
-    # model = AutoModelForCausalLM.from_pretrained(
-    #     model_path,
-    #     device_map="auto"
-    #         )
-   
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
-        quantization_config=bnb_config,
         device_map="auto"
             )
+   
+    # model = AutoModelForCausalLM.from_pretrained(
+    #     model_path,
+    #     quantization_config=bnb_config,
+    #     device_map="auto"
+    #         )
     return tokenizer, model
 
 def load_embeddings(embedding_path):
