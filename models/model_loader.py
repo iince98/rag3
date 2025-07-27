@@ -15,7 +15,8 @@ def load_model(model_path):
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
-        device_map="auto"
+        device_map="auto",
+        local_files_only=True,
             )
    
     # model = AutoModelForCausalLM.from_pretrained(
