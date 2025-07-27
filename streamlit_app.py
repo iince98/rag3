@@ -10,8 +10,8 @@ from rag1.rag_chain import build_qa_chain
 
 @st.cache_resource
 def initialize_rag_pipeline():
-    tokenizer, model = load_model(MODEL_PATH)
-    embeddings = load_embeddings(EMBEDDING_MODEL_PATH)
+    tokenizer, model = load_model("./models/Quantized_Mistral-7B-Instruct-v0.2")
+    embeddings = load_embeddings("./models/all-MiniLM-L6-v2")
 
     documents = load_documents(DATA_PATH)
     if not documents:
