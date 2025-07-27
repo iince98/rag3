@@ -1,14 +1,12 @@
 # app.py
 # For DEMO
-
 import streamlit as st
 from config import MODEL_PATH, EMBEDDING_MODEL_PATH, DATA_PATH, PERSIST_DIRECTORY
 from models.model_loader import load_model, load_embeddings
 from data.document_loader import load_documents
 from data.splitter import split_documents
 from data.vectorstore import create_vector_database
-from rag.rag_chain import build_qa_chain
-import requests
+from rag1.rag_chain import build_qa_chain
 
 @st.cache_resource
 def initialize_rag_pipeline():
