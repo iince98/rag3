@@ -1,7 +1,7 @@
 # config.py
 
-# MODEL_PATH = "./models/Mistral-7B-Instruct-v0.2"
-MODEL_PATH = "./models/Quantized_Mistral-7B-Instruct-v0.2"
+MODEL_PATH = "./models/Mistral-7B-Instruct-v0.2"
+# MODEL_PATH = "./models/Quantized_Mistral-7B-Instruct-v0.2"
 # QUANTIZED_MODEL_PATH = "./models/Quantized_Mistral-7B-Instruct-v0.2"
 EMBEDDING_MODEL_PATH = "./models/all-MiniLM-L6-v2"
 PERSIST_DIRECTORY = "./chroma_db"
