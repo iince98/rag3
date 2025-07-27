@@ -1,0 +1,8 @@
+# Ignore everything in model/
+model/*
+
+# But NOT this file
+!model/model_loader.py
+__pycache__/
+**/__pycache__/
+venv/
