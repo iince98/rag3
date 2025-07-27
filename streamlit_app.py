@@ -24,7 +24,7 @@ def initialize_rag_pipeline():
 
 def main():
     st.set_page_config(page_title="RAG QA System", layout="wide")
-    st.title("📚 Retrieval-Augmented Generation (RAG) QA System1")
+    st.title("📚 Retrieval-Augmented Generation (RAG) QA System")
 
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
