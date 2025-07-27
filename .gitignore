@@ -3,6 +3,8 @@ models/*
 
 # But NOT this file
 !models/model_loader.py
+!models/Quantized_Mistral-7B-Instruct-v0.2_test/
+# !models/Quantized_Mistral-7B-Instruct-v0.2/
 __pycache__/
 **/__pycache__/
 venv/
