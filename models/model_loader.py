@@ -1,33 +1,14 @@
-# models/model_loader.py
-
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-def load_model(model_path):
-    # bnb_config = BitsAndBytesConfig(
-    #     load_in_4bit=True,
-    #     bnb_4bit_quant_type="nf4",
-    #     bnb_4bit_compute_dtype=torch.float16,
-    #     bnb_4bit_use_double_quant=False,
-    # )
-
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_path,
-        local_files_only=True,
-        )
-    
+def load_model(model_path=None):
     model = AutoModelForCausalLM.from_pretrained(
-        model_path,
-        device_map="auto",
-        local_files_only=True,
-            )
-   
-    # model = AutoModelForCausalLM.from_pretrained(
-    #     model_path,
-    #     quantization_config=bnb_config,
-    #     device_map="auto"
-    #         )
+        "iince98/mistral-7b-instruct",
+        torch_dtype=torch.float16,
+        device_map="auto"
+    )
+    tokenizer = AutoTokenizer.from_pretrained("iince98/mistral-7b-instruct")
     return tokenizer, model
 
 def load_embeddings(embedding_path):
