@@ -3,6 +3,7 @@ import torch
 import  config
 
 def quantize_and_save_model(model_name_or_path, save_path):
+    print("started")
     # Define quantization config
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,

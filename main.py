@@ -1,3 +1,10 @@
+
+# pip install huggingface-hub
+# huggingface-cli login
+
+# huggingface-cli download mistralai/Mistral-7B-Instruct-v0.2 \
+#   --local-dir ./Mistral-7B-Instruct-v0.2 \
+#   --local-dir-use-symlinks False
 # http://100.100.101.84:8000/query?query=Who is Angela Merkel
 
 # main.py
